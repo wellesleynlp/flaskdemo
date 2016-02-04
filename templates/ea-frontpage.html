@@ -1,0 +1,24 @@
+{% extends "ea-layout.html" %}
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+
+{% if results %}
+	<h2>Is your accent for <span class="input">{{word}}</span>: <span class="output">{{ results }}</span>?</h2>
+<!--   <h2>Anagrams for <span class="input">{{ word }}</span>: <span class="output">{{ results }}</span></h2>
+  <p>Would you like to try another word?</p> -->
+{% endif %}
+
+<p>Please record yourself saying the following text:</p>
+<div>
+	<p>[placeholder text]</p>
+</div>
+
+<form action = "/" method=post>
+<input type="text" id="word" name="word">
+<input type="submit" value="Enter">
+<!-- <button onclick="alert('Enter')" /> -->
+</form>
+
+
+{% endblock %}
